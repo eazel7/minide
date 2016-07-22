@@ -20,6 +20,7 @@ io.on('connection', function (socket) {
 
   socket.on('run', function (code) {
     i = new Interpreter(code);
+    i.enableDebugger();
 
     i
     .on(
